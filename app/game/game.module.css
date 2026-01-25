@@ -110,7 +110,7 @@
   background-color: #ddd;
 }
 
-/* 떨어지는 단어 */
+
 .word {
   position: absolute; 
   color: white;
@@ -151,7 +151,7 @@
   margin-top: 0.5rem;
 }
 
-/* rank */
+
 .rankSection {
   width: 100%;
   max-width: 600px;

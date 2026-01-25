@@ -59,13 +59,13 @@ export function Page() {
 
         return(
         <div className={styles.container}> 
-            {/* HUD section */}
+            {}
             <div className={styles.hud}>
                  <div>SCORE:<span className={styles.scoreValue}>{score}</span></div>
-                 {/* <div>LIVES:<span className={styles.livesValue}>{"♥".repeat(lives)}</span></div> */}
+                 {}
                  <div>LIVES:<span className={styles.livesValue}>{"♥".repeat(Math.max(0, lives))}</span></div>
             </div>
-            {/* GAMEBOARD */}
+            {}
             <div className={styles.board}>
     
                 {loading && (
@@ -74,7 +74,7 @@ export function Page() {
                     </div>
                 )}
 
-                {/* beforeStart */}
+                {}
                 {!loading && !isPlaying && lives === 5 && (
                     <div className={`${styles.overlay} ${styles.startScreen}`}>
                         <h1 className={styles.title}>산성비</h1>
@@ -85,7 +85,7 @@ export function Page() {
                     </div>
                 )}
 
-                {/* GAMEOVER */}
+                {}
                 {!isPlaying && lives <= 0 && (
                     <div className={`${styles.overlay} ${styles.gameOverScreen}`}>
                         <h2 className={styles.title}>GAME OVER</h2>
@@ -96,7 +96,7 @@ export function Page() {
                     </div>
                 )}
 
-                {/* WORD_RANDERING */}
+                {}
                 {activeWords.map((word)=>(
                     <div 
                         key={word.id}
@@ -110,7 +110,7 @@ export function Page() {
                     </div>
                 ))}
             </div>
-            {/* INPUT SECTION */}
+            {}
             <div className={styles.inputContainer}>
                 <input
                     ref={inputRef}
