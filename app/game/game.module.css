@@ -1,0 +1,217 @@
+.container {
+  min-height: 100vh;
+  background-color: #000;
+  color: #12d0ff; 
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.hud {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #005500;
+  padding-bottom: 0.5rem;
+}
+
+.scoreValue {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.livesValue {
+  color: #ff0000;
+}
+
+.board {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  border: 2px solid #005500;
+  background-color: #4ba2a8;
+  overflow: hidden; 
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+
+  
+}
+
+.startScreen {
+  background-color: rgba(0, 0, 0, 0.8);
+ 
+}
+
+.gameOverScreen {
+  background-color: rgba(100, 0, 0, 0.9);
+  color: white;
+}
+
+
+.title {
+  font-family: 'TrickcalFont', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.startButton {
+  background-color: #00aa00;
+  color: black;
+}
+
+.startButton:hover {
+  background-color: #00ff00;
+}
+
+.retryButton {
+  background-color: white;
+  color: #500;
+}
+
+.retryButton:hover {
+  background-color: #ddd;
+}
+
+/* 떨어지는 단어 */
+.word {
+  position: absolute; 
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 255, 0, 0.4);
+  white-space: nowrap;
+}
+
+.inputContainer {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  background-color: #222;
+  color: white;
+  font-size: 1.25rem;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #006600;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #00ff00;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+}
+
+.guideText {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* rank */
+.rankSection {
+  width: 100%;
+  max-width: 600px;
+  background-color: #111;
+  border: 1px solid #004400;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.rankTitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #004400;
+  padding-bottom: 0.5rem;
+  color: #fff;
+}
+
+.rankList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rankItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #222;
+  font-size: 1.1rem;
+}
+
+.rankItem:last-child {
+  border-bottom: none;
+}
+
+.rankRank {
+  color: #888;
+  width: 40px;
+}
+
+.rankName {
+  color: #fff;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.rankScore {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
+
+.empty {
+  text-align: center;
+  color: #444;
+  padding: 2rem;
+}
