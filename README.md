@@ -43,3 +43,35 @@ fetch 실패시 미리 저장되어있는 단어들을 불러와서 임의적으
 <img width="308" height="562" alt="image" src="https://github.com/user-attachments/assets/7882a234-07b2-43c0-b546-e88c168b3b2e" />
 
 
+## 핵심 기술 구현
+
+A. TypeScript를 활용한 엄격한 상태 관리
+> 구현 내용: 게임 내 흐르는 모든 데이터(단어 좌표, 속도, 게임 상태)에 Interface를 정의하여 컴파일 단계에서 오류를 차단했습니다. <br>
+> 자바스크립트로 구현 시 발생할 수 있는 undefined 참조 오류나 연산 오류를 사전에 방지하여 게임의 **안정성(Stability)**을 확보했습니다. <br>
+
+<br>
+
+B. Next.js의 Hydration Error 해결 (SSR vs Client)
+> 문제 상황: Next.js는 서버 사이드 렌더링을 수행하는데,
+> 게임 시작 시 Math.random()으로 생성된 단어 위치가 서버와 클라이언트 간에 불일치하여 Hydration Mismatch Error가 발생했습니다.  <br>
+
+> 게임 로직이 실행되는 컴포넌트를 클라이언트 사이드('use client')로 명시하고, useEffect 마운트 이후에 게임 루프가 시작되도록 시점을 제어하여 렌더링 불일치를 해결했습니다. <br>
+
+<br>
+
+C. Custom Hooks를 통한 비즈니스 로직 분리
+> 구현 내용: 컴포넌트 내부에 복잡한 setInterval이나 상태 로직을 두지 않고, useGameLogic이라는 커스텀 훅으로 분리했습니다. <br>
+> UI 컴포넌트는 오직 '보여주는 역할'에만 집중하게 하여 코드의 가독성과 유지보수성을 높였습니다. 추후 다른 게임 모드를 추가하더라도 로직만 갈아끼울 수 있는 확장성을 고려했습니다. <br>
+
+
+## 트러블 슈팅 (Problem Solving)
+
+setInterval로 게임 루프를 돌릴 때, 리액트의 State 업데이트 스케줄링과 겹쳐 게임 속도가 불안정해지는 현상 발생. <br>
+> useRef를 사용하여 최신 상태를 참조하도록 변경하고, 브라우저 주사율에 맞춰 최적화된 requestAnimationFrame을 도입하여 끊김 없는 애니메이션을 구현함. <br>
+
+단어를 놓칠때마다 라이프가 2개씩 감소되는 현상 
+> useEffect를 통합하여 따로따로 불러오지 않게끔 해당 오류를 수정함.
+
+
+
+
