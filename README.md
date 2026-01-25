@@ -4,8 +4,8 @@
 > TypeScript로 게임을 작성하고 Next.js를 이용해서 화면에 보여주는 방식으로 작성함
 
 <br>
-타이틀화면 구현 
-<img width="749" height="513" alt="image" src="https://github.com/user-attachments/assets/7bd3b894-254e-42b1-8ecd-090ac718fd9e" />
+타이틀화면 구현 <br>
+<img width="749" height="513" alt="image" src="https://github.com/user-attachments/assets/7bd3b894-254e-42b1-8ecd-090ac718fd9e" /> 
 
 GAME START 를 누르면 게임으로 진입되고 포커스가 게임에 맞춰짐.
 <img width="852" height="797" alt="image" src="https://github.com/user-attachments/assets/73cee736-d64a-4d0e-839d-526ef2c4678e" />
