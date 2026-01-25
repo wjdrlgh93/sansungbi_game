@@ -16,8 +16,9 @@ GAME START 를 누르면 게임으로 진입되고 포커스가 게임에 맞춰
 라이프 소진시 GAME OVER 되며 <br>
 
 단어는 Datamuse API 를 이용하여 데이터를 가져오고 fetch 하게 만들었으며, <br>
-fetch 실패시 미리 저장되어있는 단어들을 불러와서 임의적으로 게임할 수 있게 함.
+fetch 실패시 미리 저장되어있는 단어들을 불러와서 임의적으로 게임할 수 있게 함. <br>
 
-
+## 파일구조
+<img width="308" height="562" alt="image" src="https://github.com/user-attachments/assets/7882a234-07b2-43c0-b546-e88c168b3b2e" />
 
 
