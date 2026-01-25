@@ -13,9 +13,9 @@ GAME START 를 누르면 게임으로 진입되고 포커스가 게임에 맞춰
 <img width="884" height="790" alt="image" src="https://github.com/user-attachments/assets/c0c67e3b-70dd-48f0-ac96-03888d3e51c7" />
 <img width="884" height="809" alt="image" src="https://github.com/user-attachments/assets/1f29827b-be80-430d-aa0e-846fe3a2073c" />
 
-라이프 소진시 GAME OVER 되며 
+라이프 소진시 GAME OVER 되며 <br>?
 
-단어는 Datamuse API 를 이용하여 데이터를 가져오고 fetch 하게 만들었으며, 
+단어는 Datamuse API 를 이용하여 데이터를 가져오고 fetch 하게 만들었으며, <br>
 fetch 실패시 미리 저장되어있는 단어들을 불러와서 임의적으로 게임할 수 있게 함.
 
 
