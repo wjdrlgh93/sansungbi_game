@@ -5,16 +5,35 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+interface DBRankingItem {
+  _id: string;
+  nickname: string;
+  score: number;
+  createdAt: string;
+}
+
 export default function Home() {
 
-    const [rankings, setRankings] = useState<RankItem[]>([]);
+    const [rankings, setRankings] = useState<DBRankingItem[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        // when component mounted bring data from localStroage
-        const data = getLocalRankings();
-        setRankings(data);
-        setLoading(false);
+      const fectchRankings = async() =>{
+        try{
+          const res = await fetch('/api/ranking');
+          const data = await res.json();
+
+          if(Array.isArray(data)){
+            setRankings(data);
+          }
+
+        } catch(error){
+          console.error("랭킹 불러오기 실패",error);
+        } finally {
+          setLoading(false);
+        }
+      };
+      fectchRankings();
     },[]);
 
     return(
@@ -34,10 +53,10 @@ export default function Home() {
         ) : rankings.length > 0 ? (
           <ul className={styles.rankList}>
             {rankings.map((item, index) => (
-              <li key={item.id} className={styles.rankItem}>
+              <li key={item._id} className={styles.rankItem}>
                 <span className={styles.rankRank}>#{index + 1}</span>
                 <span className={styles.rankName}>
-                   {item.username}
+                   {item.nickname}
                 </span>
                 <span className={styles.rankScore}>{item.score} pts</span>
               </li>

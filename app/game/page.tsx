@@ -2,10 +2,11 @@
 
 import { useGameLoop } from '@/lib/hooks/useGameLoop';
 import { fetchTechWords } from '@/lib/word-service';
+import GameOverModal from '@/components/GameOverModal';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from "./game.module.css";
 import { saveLocalScore } from '@/lib/stroge';
-
+import { start } from 'repl';
 
 export function Page() {
     // prepare WordData 
@@ -19,9 +20,6 @@ export function Page() {
     const [inputValue, setInputValue] = useState("");
     const inputRef = useRef<HTMLInputElement>(null);
 
-    //ranking
-    const [username, setUsername] = useState("");
-    const [isSaved, setIsSaved] = useState(false);
 
     useEffect(()=>{
         setLoading(true);
@@ -44,19 +42,9 @@ export function Page() {
             }
         };
 
-        const handleSave = () =>{
-            if(!username.trim()) return alert("Please enter your name!");
+        const isGameOver = !isPlaying && lives <=0 && !loading;
 
-            // saveLocalStroge
-            saveLocalScore(username, score);
-
-            setIsSaved(true);
-            alert("Score Saved to Local Storage");
-        };
-
-
-        // HTML 
-
+        // // HTML // //
         return(
         <div className={styles.container}> 
             {}
@@ -126,8 +114,14 @@ export function Page() {
                     PRESS [ENTER] to fire / Focus is automatic
                 </p>
             </div>
+        {/* 게임 상태가 'OVER'일 때만 모달 띄우기 */}
+        {isGameOver && (
+            <GameOverModal score={score} onRestart={startGame}/>
+        )}
         </div>
         );
+
+
     }
 
 
