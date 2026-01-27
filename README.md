@@ -44,7 +44,8 @@ GAME START 를 누르면 게임으로 진입되고 포커스가 게임에 맞춰
 fetch 실패시 미리 저장되어있는 단어들을 불러와서 임의적으로 게임할 수 있게 함. <br>
 
 ## 파일구조
-<img width="308" height="562" alt="image" src="https://github.com/user-attachments/assets/7882a234-07b2-43c0-b546-e88c168b3b2e" />
+<img width="357" height="1002" alt="화면 캡처 2026-01-28 045315" src="https://github.com/user-attachments/assets/a2274e4a-617b-42fe-b91e-c3ca7e09810d" />
+
 
 
 ## 핵심 기술 구현
