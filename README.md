@@ -82,6 +82,8 @@ setInterval로 게임 루프를 돌릴 때, 리액트의 State 업데이트 스�
 > 점수 기록을 위해 범용적이고 사용쉬운 mongoDB 이용 <br>
 
 # 작성후 Vercel로 배포 
+<img width="992" height="357" alt="image" src="https://github.com/user-attachments/assets/446a1480-8c67-44fa-b401-fea0b2f1ee52" /> <br/>
+
 > .env 내용은 vercel의 환경변수로 붙여 관리함 <br>
 
 
