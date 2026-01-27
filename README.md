@@ -1,6 +1,10 @@
 
 
+## 산성비게임을 직접해볼수 있는 사이트 
+https://sansungbi-game.vercel.app/
 
+> Q: 왜 게임을 만드는 데 React/Next.js를 썼나요? Canvas나 Unity가 낫지 않나요?
+>> DOM 조작만으로도 충분히 구현가능하고, 주력 스택인 React 활용 상태관리능력을 보여주고 싶어 선택함 
 
 ## 👾👾👾 Next.js + TypeScript 를 사용한 산성비 게임
 
@@ -72,11 +76,12 @@ setInterval로 게임 루프를 돌릴 때, 리액트의 State 업데이트 스�
 단어를 놓칠때마다 라이프가 2개씩 감소되는 현상 
 > useEffect를 통합하여 따로따로 불러오지 않게끔 해당 오류를 수정함.
 
+
 # mongoDB 이용 
->> 점수 기록을 위해 범용적이고 사용쉬운 mongoDB 이용 <br>
+> 점수 기록을 위해 범용적이고 사용쉬운 mongoDB 이용 <br>
 
 # 작성후 Vercel로 배포 
->> .env 내용은 vercel의 환경변수로 붙여 관리함 <br>
+> .env 내용은 vercel의 환경변수로 붙여 관리함 <br>
 
 
 
