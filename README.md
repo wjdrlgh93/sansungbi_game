@@ -81,6 +81,7 @@ setInterval로 게임 루프를 돌릴 때, 리액트의 State 업데이트 스�
 # mongoDB 이용 
 > 점수 기록을 위해 범용적이고 사용쉬운 mongoDB 이용 <br>
 <img width="1251" height="455" alt="image" src="https://github.com/user-attachments/assets/d71ce61e-5927-4589-9a43-cb4b1bae0b0c" /><br>
+<img width="688" height="655" alt="image" src="https://github.com/user-attachments/assets/43dd9327-1528-4e9b-89cb-149870a578e6" /><br>
 
 
 # 작성후 Vercel로 배포 
